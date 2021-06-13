@@ -12,9 +12,7 @@ body{
 
 .container{
     max-width: 1140px;
-    /* background-color: blue; */
     margin: auto;
-
 }
 
 .row{
@@ -37,17 +35,6 @@ header .row{
     align-items: center;
 }
 
-/* 
-header .brand-name ul li a::before{
-    content: '';
-    height: 3px;
-    background-color: #ffffff;
-    display: block;
-    width: 100%;
-    position: absolute;
-    left: 0px;
-    bottom: 0px; 
-} */
 
 header .brand-name a{
     text-decoration: none;
@@ -60,14 +47,14 @@ header .brand-name a{
 
 
 header .navbar ul{
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
-    margin:0;
 }
 
 
-header .navbar ul li{
-    display: inline-block;
+header .navbar li{
+    display: inline-flex;
     margin-left: 35px;
 }
 
@@ -81,7 +68,6 @@ header .navbar ul li a{
     position: relative;
 } 
 
-
 header .navbar ul li a.active::before{
     content: '';
     height: 3px;
@@ -94,7 +80,7 @@ header .navbar ul li a.active::before{
 
 .home{
     min-height:100vh;
-    background-image: url("images/myimg.png");
+    background-image: url("../Images/home_setup_image.jpeg");
     background-size: cover;
     background-position: center;
 }
