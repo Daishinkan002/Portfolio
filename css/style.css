@@ -1276,6 +1276,21 @@ footer .credits a {
 
 
 /*======================================
+//--//-->  Navbar Section
+======================================*/
+
+
+
+nav{
+  background-color: transparent !important;
+}
+
+
+.nav-wrapper a{
+  color: #aaa !important;
+}  
+
+/*======================================
 //--//-->   Project Section
 ======================================*/
 

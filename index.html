@@ -32,7 +32,6 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
@@ -75,27 +74,37 @@
 
   <!--/ Nav End /-->
 
-  <div class="navbar-fixed">
-    <nav style="opacity: 0.5; background-color:blueviolet">
+  <div class="fixed-top">
+    <!-- <nav class="navbar-trans"> -->
+    <nav style="opacity: 0.9;">
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo">RESUME</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html"><span style="color: rgb(0, 0, 0);">SASS</span></a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">Javascript</a></li>
-          <li><a href="mobile.html">Mobile</a></li>
+          <li><a href="sass.html">About</a></li>
+          <li><a href="#home"><span style="color: yellow;">Home</span></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#links">Links</a></li>
         </ul>
       </div>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">Projects</a></li>
+        <li><a href="#projects">Contact</a></li>
+        <li><a href="#contact">Links</a></li>
+      </ul>
     </nav>
   </div>
+  
+  
+  
+    
 
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
-  </ul>
+  
 
   <!--/ Intro Skew Star /-->
   <div id="home" class="intro route bg-image" style="background-image: url(img/desktop_setup.jpeg)">
@@ -244,7 +253,7 @@
   <!--/ Section Services End /-->
 
   <!--/ Section Portfolio Star /-->
-  <section id="work" class="portfolio-mf sect-pt4 route">
+  <section id="projects" class="portfolio-mf sect-pt4 route">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
