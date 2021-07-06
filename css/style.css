@@ -1282,7 +1282,17 @@ footer .credits a {
 
 
 nav{
-  background-color: transparent !important;
+  background-color: transparent;
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+}
+
+a.brand-logo{
+  padding-left: 20mm;
+  color: rgb(0, 0, 0);
 }
 
 
