@@ -1297,8 +1297,21 @@ a.brand-logo{
 
 
 .nav-wrapper a{
-  color: #aaa !important;
+  color: #aaa;
+}
+
+
+
+.nav-wrapper a:active{
+  color: #bdf1e0;
 }  
+
+
+.nav-wrapper li{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+  font-weight: 800;
+}
+
 
 /*======================================
 //--//-->   Project Section
