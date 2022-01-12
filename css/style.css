@@ -1483,3 +1483,14 @@ padding: 0px,0px,0px,0px;
  -webkit-filter: hue-rotate(180deg);filter: hue-rotate(180deg);
 
 }
+
+
+.center {
+  margin: auto;
+  width: 100%;
+  border: 3px solid rgb(24, 21, 21);
+  color: red;
+  font-size: 40px;
+  background-color: #10161b;
+  padding: 10px;
+}
