@@ -139,13 +139,15 @@ section h2 {
 
 
 
-#about {
+.main-section {
     /* background-color: #4d4c4c; */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     /* max-width: 800px; */
-    padding: 40px;
+    /* padding: 10px; */
 }
 
 /* Main content styles */
@@ -171,16 +173,20 @@ section h2 {
 
 /* Strong text */
 strong {
-    color: #1a73e8;
+    color: #61f29b;
 }
 
 
 
 .projects {
     display: flex;
-    gap: 20px;
+    gap: 50px;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+
+
 .project-card {
     background: #fff;
     border: 1px solid #ddd;
@@ -188,8 +194,8 @@ strong {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
     transition: transform 0.3s, box-shadow 0.3s;
-    flex: 1 1 calc(33.333% - 20px);
-    max-width: calc(33.333% - 20px);
+    flex: 1 1 calc(33.333% - 50px);
+    max-width: calc(33.333% - 50px);
 }
 .project-card:hover {
     transform: translateY(-10px);
@@ -198,6 +204,7 @@ strong {
 .project-card img {
     width: 100%;
     height: auto;
+    display: block;
 }
 .project-card h3 {
     font-family: 'Playfair Display', serif;
