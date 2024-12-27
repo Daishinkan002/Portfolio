@@ -136,19 +136,46 @@ section h2 {
     border-bottom: 2px solid #ffd700;
     display: inline-block;
 }
+
+
+
 #about {
-    background-image: url('img/desktop_setup.jpeg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-    padding: 70px 50px;
-}
-#about p {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
+    /* background-color: #4d4c4c; */
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    /* max-width: 800px; */
+    padding: 40px;
 }
+
+/* Main content styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #c7c4c4;
+    line-height: 1.8;
+}
+
+/* Strong text */
+strong {
+    color: #1a73e8;
+}
+
+
+
 .projects {
     display: flex;
     gap: 20px;
