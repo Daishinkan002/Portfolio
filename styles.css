@@ -47,6 +47,17 @@ header nav .logo a {
 
 
 
+header p {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ebcccc;
+    display: inline-block;
+    /* min-width: 300px;     */
+}
+
+
+
+
 
 header nav .logo a:hover {
     color: #ffd700;
