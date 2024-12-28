@@ -18,5 +18,6 @@ This repository contains everything you need to know about the design, structure
 root/
 ├── index.html        # Main HTML file
 ├── style.css         # Core styles
-├── img/           # Images
+├── js                # Contains js elements
+├── img/              # Contains Images
 ├── README.md         # You're reading it now!
