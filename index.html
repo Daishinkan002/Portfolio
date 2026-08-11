@@ -3,124 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shantanu Tripathi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Shantanu Tripathi — Computer Vision Research Engineer</title>
+    <meta name="description" content="Shantanu Tripathi — Computer Vision Research Engineer building real-time detection, recognition, and NLP systems, with a lifelong habit of building robots too.">
+    <link rel="icon" href="img/shantanu.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- For Fonts -->
-    <link rel="stylesheet" href="styles.css">        
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Custom cursor: behaves like a live detector reticle. Purely decorative. -->
+    <div class="reticle" aria-hidden="true">
+        <div class="reticle-cross"></div>
+        <p class="reticle-coords"></p>
+        <div class="reticle-box">
+            <span class="corner tl"></span>
+            <span class="corner tr"></span>
+            <span class="corner bl"></span>
+            <span class="corner br"></span>
+            <span class="reticle-tag"><span class="label-text"></span> · <span class="conf-value">0.0%</span></span>
+        </div>
+    </div>
+
     <header>
+        <canvas id="hero-grid" aria-hidden="true"></canvas>
         <nav>
             <div class="logo">
-                <a href="#">Shantanu Tripathi</a> <!-- Link to home page -->
+                <a href="#" data-detect="Home" data-confidence="99.9">Shantanu Tripathi</a>
             </div>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#blogs">Blogs</a>
-                <a href="#contact">Contact</a>
+                <a href="#about" data-detect="Section · About" data-confidence="97.2">About</a>
+                <a href="#projects" data-detect="Section · Projects" data-confidence="97.2">Projects</a>
+                <a href="#blogs" data-detect="Section · Blogs" data-confidence="97.2">Blogs</a>
+                <a href="#contact" data-detect="Section · Contact" data-confidence="97.2">Contact</a>
             </div>
         </nav>
         <script src="js/navsticky_onscroll.js"></script>
-        <div class="intro">
-            <h1>Shantanu Tripathi</h1>
-            <p id="typing-effect"></p>
+
+        <div class="hero-content">
+            <div class="intro">
+                <p class="hero-kicker">COMPUTER VISION · SIGNAL PROCESSED</p>
+                <h1>Shantanu<br>Tripathi</h1>
+                <p class="hero-sub">Detects faces, flags intrusions, follows lines — and occasionally rhymes.</p>
+
+                <div class="tag-cycler" id="tag-cycler">
+                    <span class="tag-chip-dot"></span>
+                    <span class="tag-label"></span>
+                    <span class="tag-confidence"></span>
+                </div>
+
+                <div class="scroll-cue">SCROLL <span>↓</span></div>
+            </div>
+
+            <div class="hero-portrait" data-detect="SUBJECT_01 · Human" data-confidence="99.2">
+                <img src="img/shantanu_spec_smile.jpeg" alt="Shantanu Tripathi smiling, wearing reflective sunglasses">
+                <span class="vf-corner tl"></span>
+                <span class="vf-corner tr"></span>
+                <span class="vf-corner bl"></span>
+                <span class="vf-corner br"></span>
+                <p class="vf-caption">SUBJECT_01 · CLASS: HUMAN · STATUS: SMILING · CONF 99.2%</p>
+            </div>
         </div>
-        <script src="js/typingEffect.js"></script>
     </header>
 
     <div class="main-section">
+
         <section id="about">
-            <div class="container">
-                <div class="content">
-                    <h1>About Me</h1>
-                    <p>Hello! I'm a passionate Computer Vision Researcher with around 3 years of experience designing Computer Vision and NLP solutions, I specialize in developing cool cutting-edge algorithms and deploying scalable real-time vision-based solutions. Passionate about leveraging AI to solve real-world challenges, my expertise spans image detection, recognition, deep learning, real-time processing and many more. (Huhh !!!  too much English... ).</p>
-                    <p>Throughout my career, I've had the privilege of working with industry leaders like <strong>Metafusion</strong>, <strong>Awiros</strong> and <strong>Bobble AI</strong>, where I have contributed to projects spanning computer vision, natural language processing (NLP), and robotics.</p>
-                    <p>As a former President of <strong>IRIS</strong>, a robotics club, I had the opportunity to lead a team of talented individuals in developing innovative robotics solutions and fostering collaboration among peers.</p>
-                    <p>I have a deep passion for playing percussion instruments, writing poetry, creating character illustrations, and engaging in various other creative pursuits..</p>
+            <div class="section-head" data-reveal>
+                <span class="section-index">01</span>
+                <h2>About</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-copy" data-reveal>
+                    <p class="lede">Three years into computer vision and I've learned the machines are better at spotting faces than I am at spotting deadlines.</p>
+                    <p>I build systems that detect, recognize, and predict in real time — the kind of work where "close enough" gets you fired and "99%" gets you a good night's sleep.</p>
+                    <p>I've done this at <strong>Metafusion</strong>, <strong>Awiros</strong>, and <strong>Bobble AI</strong> — three very different rooms, one recurring theme: teach a model to notice something a human would've missed, then ship it before anyone notices you. Vision, NLP, the occasional robot. All of it, eventually, comes down to the same question — what's actually in this frame, and what do we do about it.</p>
+                    <p>Before any of that, I was President of <strong>IRIS</strong>, our robotics club, which mostly meant convincing a room of very smart people to build things that balanced, followed lines, and didn't catch fire. Leadership, it turns out, is just debugging with more people involved.</p>
+                    <p>Off the clock, I play percussion, write poetry, and draw characters that will never appear in a dataset. Call it my analog fallback — for when the model's confident and I'm not.</p>
                 </div>
+
+                <aside class="spec-sheet" data-reveal>
+                    <div class="spec-row">
+                        <span class="spec-key">ROLE</span>
+                        <span class="spec-val">Computer Vision Research Engineer</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-key">EXPERIENCE</span>
+                        <span class="spec-val">~3 Years</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-key">DEPLOYMENTS</span>
+                        <div class="chip-row">
+                            <span class="chip">Metafusion</span>
+                            <span class="chip">Awiros</span>
+                            <span class="chip">Bobble AI</span>
+                        </div>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-key">LEADERSHIP</span>
+                        <span class="spec-val">President, IRIS Robotics Club</span>
+                    </div>
+                    <div class="spec-row skills-row">
+                        <span class="spec-key">SKILL FIELD</span>
+                        <div class="skill-tags">
+                            <span class="skill-tag" style="--conf:97; --i:0">Computer Vision</span>
+                            <span class="skill-tag" style="--conf:93; --i:1">Deep Learning</span>
+                            <span class="skill-tag" style="--conf:90; --i:2">NLP</span>
+                            <span class="skill-tag" style="--conf:88; --i:3">Real-Time Systems</span>
+                            <span class="skill-tag" style="--conf:85; --i:4">Robotics</span>
+                        </div>
+                    </div>
+
+                    <div class="live-feed">
+                        <div class="live-feed-head">
+                            <span class="rec-dot"></span> LIVE FEED
+                            <span class="timecode" id="timecode">00:00:00</span>
+                        </div>
+                        <img src="img/shantanu.gif" alt="Looping animated clip of Shantanu">
+                    </div>
+                </aside>
             </div>
         </section>
-        <section id="blogs">
-            <div class="container">
-                <div class="content">
-                    <h1>Blogs</h2>
-                    <p>Will add soon.</p>
-                </div>
-            </div>
-        </section>
+
+        <p class="poetic-divider" data-reveal>“Every model learns to look closer. I'm just trying to learn the same.”</p>
 
         <section id="projects">
-            <div class="container">
-                <div class="content">
-                <h1>Featured Projects</h1>
-                <div class="projects">
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/300x200" alt="Project 1">
-                        <h3>Face Recognition</h3>
-                        <p>Implemented a real-time face recognizer, which does detection and recognition simultaneously.</p>
-                    </div>
-                    <div class="project-card">
-                        <img src="img/inventory_management.png">
-                        <h3>Inventory Automation</h3>
-                        <p>Implemented a real-time inventory detector and recognizer, which automates and helps maintainence of packages.</p>
-                    </div>
-                    <div class="project-card">
-                        <img src="img/intrusion.webp">
-                        <h3>Intrusion Based Detections</h3>
-                        <p>Designed and Developed a Realtime State of the Art algorithm, which predicts Intrusion by 99%.</p>
-                    </div>
-                    <div class="project-card">
-                        <img src="img/emotion_recognition_happy.png">
-                        <h3>Facial Emotion Recognition</h3>
-                        <p>Developed Emotion Recognition model which predicts seven types of facial emotions.</p>
-                    </div>
+            <div class="section-head" data-reveal>
+                <span class="section-index">02</span>
+                <h2>Featured Detections</h2>
+                <span class="section-meta">9 OBJECTS IN FRAME</span>
+            </div>
+            <p class="section-intro" data-reveal>Nine problems, nine models, one running theme: teach a machine to notice something worth noticing.</p>
 
-                    <div class="project-card">
-                        <img src="img/shantanu_spec_smile.jpeg">
-                        <h3>Smile Detection</h3>
-                        <p>Designed and Developed a CNN model which predicts smiles of people.</p>
+            <div class="projects">
+
+                <article class="project-card" data-reveal style="--i:0" data-detect="Face Recognition" data-confidence="98.1">
+                    <div class="card-media card-media--placeholder">
+                        <svg class="placeholder-icon" viewBox="0 0 100 100" aria-hidden="true">
+                            <rect x="30" y="22" width="40" height="48" rx="18" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                            <circle cx="41" cy="42" r="2.4" fill="currentColor"/>
+                            <circle cx="59" cy="42" r="2.4" fill="currentColor"/>
+                            <path d="M40 56 Q50 63 60 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                            <rect x="24" y="16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.4"/>
+                            <rect x="66" y="16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.4"/>
+                            <rect x="24" y="74" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.4"/>
+                            <rect x="66" y="74" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.4"/>
+                        </svg>
+                        <span class="detect-chip vision"><span class="dot"></span>VISION</span>
+                        <span class="match-score"><span class="score-value">0.0</span>% MATCH</span>
+                        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
                     </div>
-                    <div class="project-card">
-                        <img src="img/keyboard_img.jpeg">
-                        <h3>Typing Helper</h3>
-                        <p>Implemented NLP model which predicts next-word helping increase efficiency while typing.</p>
+                    <h3>Face Recognition</h3>
+                    <p>Detects and recognizes faces in the same breath, in real time — no "hang on, let me check" required.</p>
+                    <p class="card-meta">OpenCV · Deep Metric Learning</p>
+                </article>
+
+                <article class="project-card" data-reveal style="--i:1" data-detect="Inventory Automation" data-confidence="96.4">
+                    <div class="card-media">
+                        <img src="img/inventory_management.png" alt="Real-time inventory detection and tracking system">
+                        <span class="detect-chip vision"><span class="dot"></span>VISION</span>
+                        <span class="match-score"><span class="score-value">0.0</span>% MATCH</span>
+                        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
                     </div>
-                    <div class="project-card">
-                        <img src="img/relation_extraction.jpeg">
-                        <h3>Relation Extractor</h3>
-                        <p>Implemented a deep learning model, which tells the relation between different words in a sentence.</p>
+                    <h3>Inventory Automation</h3>
+                    <p>A real-time detector that spots, sorts, and tracks packages so nobody has to count boxes by hand again.</p>
+                    <p class="card-meta">Object Detection · Tracking</p>
+                </article>
+
+                <article class="project-card" data-reveal style="--i:2" data-detect="Intrusion Detection" data-confidence="99.0">
+                    <div class="card-media">
+                        <img src="img/intrusion.webp" alt="Real-time intrusion detection algorithm visualization">
+                        <span class="detect-chip vision"><span class="dot"></span>VISION</span>
+                        <span class="match-score"><span class="score-value">0.0</span>% MATCH</span>
+                        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
                     </div>
-                    <div class="project-card">
-                        <img src="img/self_balancing_bot..jpg">
-                        <h3>Self Balancing Bot</h3>
-                        <p>Built a Bot which can balance on two-wheels by itself.</p>
+                    <h3>Intrusion Detection</h3>
+                    <p>A real-time system that flags intrusions with 99% accuracy — the 1% keeps me humble.</p>
+                    <p class="card-meta">Anomaly Detection · Video</p>
+                </article>
+
+                <article class="project-card" data-reveal style="--i:3" data-detect="Facial Emotion Recognition" data-confidence="94.6">
+                    <div class="card-media">
+                        <img src="img/emotion_recognition_happy.png" alt="Facial emotion recognition model output">
+                        <span class="detect-chip vision"><span class="dot"></span>VISION</span>
+                        <span class="match-score"><span class="score-value">0.0</span>% MATCH</span>
+                        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
                     </div>
-                    <div class="project-card">
-                        <img src="img/line_follower.jpg">
-                        <h3>Line Follower</h3>
-                        <p>Built a Line Follower Bot which can follow a black line with infrared detector.</p>
+                    <h3>Facial Emotion Recognition</h3>
+                    <p>Reads a face and sorts it into one of seven emotions, faster than most people read a room.</p>
+                    <p class="card-meta">CNN · 7-Class Classification</p>
+                </article>
+
+                <article class="project-card" data-reveal style="--i:4" data-detect="Smile Detection" data-confidence="95.8">
+                    <div class="card-media">
+                        <img src="img/shantanu_spec_smile.jpeg" alt="Smile detection CNN sample output" style="object-position: top center;">
+                        <span class="detect-chip vision"><span class="dot"></span>VISION</span>
+                        <span class="match-score"><span class="score-value">0.0</span>% MATCH</span>
+                        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
                     </div>
-                
+                    <h3>Smile Detection</h3>
+                    <p>A CNN trained on one simple question: is this person actually smiling, or just tolerating the camera.</p>
+                    <p class="card-meta">Convolutional Neural Network</p>
+                </article>
+
+                <article class="project-card" data-reveal style="--i:5" data-detect="Typing Helper" data-confidence="92.3">
+                    <div class="card-media">
+                        <img src="img/keyboard_img.jpeg" alt="NLP next-word prediction typing assistant">
+                        <span class="detect-chip nlp"><span class="dot"></span>NLP</span>
+                        <span class="match-score"><span class="score-value">0.0</span>% MATCH</span>
+                        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
                     </div>
-                </div>
+                    <h3>Typing Helper</h3>
+                    <p>An NLP model that predicts your next word before you've fully committed to it — typing, sped up.</p>
+                    <p class="card-meta">Language Modeling</p>
+                </article>
+
+                <article class="project-card" data-reveal style="--i:6" data-detect="Relation Extractor" data-confidence="91.5">
+                    <div class="card-media">
+                        <img src="img/relation_extraction.jpeg" alt="Relation extraction model mapping word relationships">
+                        <span class="detect-chip nlp"><span class="dot"></span>NLP</span>
+                        <span class="match-score"><span class="score-value">0.0</span>% MATCH</span>
+                        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+                    </div>
+                    <h3>Relation Extractor</h3>
+                    <p>A deep learning model that maps how words in a sentence actually relate — grammar, minus the guesswork.</p>
+                    <p class="card-meta">Deep Learning · NLP</p>
+                </article>
+
+                <article class="project-card" data-reveal style="--i:7" data-detect="Self-Balancing Bot" data-confidence="93.7">
+                    <div class="card-media">
+                        <img src="img/self_balancing_bot..jpg" alt="Self-balancing two-wheel robot">
+                        <span class="detect-chip robotics"><span class="dot"></span>ROBOTICS</span>
+                        <span class="match-score"><span class="score-value">0.0</span>% MATCH</span>
+                        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+                    </div>
+                    <h3>Self-Balancing Bot</h3>
+                    <p>A two-wheeled robot that stays upright through sheer feedback-loop stubbornness.</p>
+                    <p class="card-meta">PID Control · Embedded</p>
+                </article>
+
+                <article class="project-card" data-reveal style="--i:8" data-detect="Line Follower" data-confidence="90.9">
+                    <div class="card-media">
+                        <img src="img/line_follower.jpg" alt="Infrared line-following robot">
+                        <span class="detect-chip robotics"><span class="dot"></span>ROBOTICS</span>
+                        <span class="match-score"><span class="score-value">0.0</span>% MATCH</span>
+                        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+                    </div>
+                    <h3>Line Follower</h3>
+                    <p>An infrared-guided bot that tracks a black line without ever asking for directions.</p>
+                    <p class="card-meta">Infrared Sensors · Embedded</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="blogs">
+            <div class="section-head" data-reveal>
+                <span class="section-index">03</span>
+                <h2>Blogs</h2>
+            </div>
+            <div class="no-signal-panel" data-reveal>
+                <div class="scanline"></div>
+                <p class="mono-caption">NO ENTRIES DETECTED — WRITING QUEUE: 0</p>
+                <p class="no-signal-sub">Nothing published yet — the drafts folder is basically a bounding box around good intentions. Detection pending; recognition to follow.</p>
             </div>
         </section>
 
         <section id="contact" class="contact-section">
-            <h2>Contact Me</h2>
-            <div class="contact-links">
-                <a href="mailto:shantanutripathi002@gmail.com" class="contact-link" target="_blank">
+            <div class="section-head" data-reveal>
+                <span class="section-index">04</span>
+                <h2>Contact</h2>
+            </div>
+            <p class="contact-cta" data-reveal>Got a project, a question, or a strong opinion about neural nets — this is where that conversation starts.</p>
+
+            <div class="channels-panel" data-reveal>
+                <div class="channels-head"><span class="status-dot"></span>STATUS: ONLINE</div>
+
+                <a class="channel-row" href="mailto:shantanutripathi002@gmail.com" target="_blank" data-detect="Email" data-confidence="99.1">
                     <i class="fas fa-envelope"></i>
+                    <span class="channel-label">Email</span>
+                    <span class="channel-handle">shantanutripathi002@gmail.com</span>
+                    <span class="channel-arrow">→</span>
                 </a>
-                <a href="https://www.linkedin.com/in/shantanu-tripathi-0a740b170/" class="contact-link" target="_blank">
+                <a class="channel-row" href="https://www.linkedin.com/in/shantanu-tripathi-0a740b170/" target="_blank" data-detect="LinkedIn" data-confidence="99.1">
                     <i class="fab fa-linkedin"></i>
+                    <span class="channel-label">LinkedIn</span>
+                    <span class="channel-handle">shantanu-tripathi</span>
+                    <span class="channel-arrow">→</span>
                 </a>
-                <a href="https://www.github.com/daishinkan002" class="contact-link" target="_blank">
+                <a class="channel-row" href="https://www.github.com/daishinkan002" target="_blank" data-detect="GitHub" data-confidence="99.1">
                     <i class="fab fa-github"></i>
+                    <span class="channel-label">GitHub</span>
+                    <span class="channel-handle">daishinkan002</span>
+                    <span class="channel-arrow">→</span>
                 </a>
-                <a href="https://www.instagram.com/shantanu._043" class="contact-link" target="_blank">
+                <a class="channel-row" href="https://www.instagram.com/shantanu._043" target="_blank" data-detect="Instagram" data-confidence="99.1">
                     <i class="fab fa-instagram"></i>
+                    <span class="channel-label">Instagram</span>
+                    <span class="channel-handle">shantanu._043</span>
+                    <span class="channel-arrow">→</span>
                 </a>
             </div>
         </section>
@@ -128,7 +312,11 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Shantanu Tripathi. All rights reserved.</p>
+        <p>&copy; 2026 Shantanu Tripathi — built by hand, debugged by faith.</p>
+        <p class="footer-meta">BUILT WITH VANILLA JS · STATIC · GITHUB PAGES</p>
     </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/reticle.js"></script>
 </body>
 </html>
